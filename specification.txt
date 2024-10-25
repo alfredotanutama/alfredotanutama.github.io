@@ -1,0 +1,100 @@
+A. 4 .html:
+    1. halo
+    2. qotd
+    3. bout
+    4. expe
+    5. form
+
+
+B. 10 html tags, beside html, head, body, title:
+    1. <p>
+    2. <div>
+    3. <li>
+    4. <img>>
+    5. <button>
+    6. <ul>
+    7. <iframe>
+    8. <form>
+    9. <script>
+    10. <nav>
+
+C. .css sheet:
+    1. /workspaces/72197345/homepage/halo/style.css
+    2. /workspaces/72197345/homepage/qotd/style.css
+    3. /workspaces/72197345/homepage/bout/style.css
+    4. /workspaces/72197345/homepage/expe/style.css
+    5. /workspaces/72197345/homepage/form/style.css
+
+D. .css has at least 5 selectors:
+    1. .img-gallery img
+    2. .full-view-img
+    3. .full-view-img span
+    4. h3,p
+    5. .content
+
+E. .css has at least 5 properties:
+    1. justify-content
+    2. padding
+    3. background
+    4. border
+    5. text-align
+
+F. javascript integrations:
+    1. qotd
+     <script>
+      const category = 'happiness'; // Set the category for the quote
+      const apiKey = 'k7Lb7FDMRIloJ8mTka9c0A==DZgQIYpFFXBtM2Q6'; // Replace with your actual API key
+
+      function fetchQuoteFromNinja() {
+          return new Promise((resolve, reject) => {
+              $.ajax({
+                  method: 'GET',
+                  url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+                  headers: { 'X-Api-Key': apiKey }, // Use the apiKey variable
+                  contentType: 'application/json',
+                  success: function(result) {
+                      if (result.length > 0) {
+                          resolve(result[0].quote + " - " + result[0].author);
+                      } else {
+                          reject("No quotes found.");
+                      }
+                  },
+                  error: function(jqXHR) {
+                      reject('Error: ' + jqXHR.responseText);
+                  }
+              });
+          });
+      }
+
+      async function generateQuote() {
+          const quoteElement = document.querySelector("#quote");
+          quoteElement.textContent = "Loading Quote....";
+          try {
+              const quote = await fetchQuoteFromNinja();
+              quoteElement.textContent = quote;
+          } catch (error) {
+              quoteElement.textContent = error;
+          }
+      }
+
+      const generateBtn = document.querySelector("#generateBtn");
+      generateBtn.addEventListener("click", generateQuote);
+
+      const copyBtn = document.querySelector("#copyBtn");
+      copyBtn.addEventListener("click", () => {
+          const quoteElement = document.querySelector("#quote");
+          const quote = quoteElement.textContent;
+          navigator.clipboard.writeText(quote).then(() => {
+              alert("Quote copied!");
+          });
+      });
+  </script>
+
+
+2. form
+        <script>
+            window.addEventListener('pageshow', function() {
+                // Clear form data or any other data here
+                document.querySelector('form').reset();
+            });
+        </script>
