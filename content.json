@@ -173,5 +173,6 @@
   ],
   "archive_label": "CS50",
   "archive_url": "/v1/",
-  "footer": "Alfredo Tanutama - 2026"
+  "footer": "Alfredo Tanutama - 2026",
+  "portrait_grayscale": false
 }

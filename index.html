@@ -93,6 +93,7 @@ p{margin:0 0 1.1rem;max-width:65ch;color:#2c2822}
 @media(min-width:860px){.about{grid-template-columns:1.35fr .9fr;gap:4rem}}
 .portrait{position:relative;border:1px solid var(--ink);padding:.5rem;background:var(--paper-2);margin:0;max-width:420px}
 .portrait img{display:block;width:100%;height:auto}
+.portrait img.bw{filter:grayscale(1) contrast(1.05)}
 .portrait figcaption{margin-top:.5rem;font-size:11px;letter-spacing:.08em;color:var(--muted)}
 
 .logs{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
@@ -244,7 +245,9 @@ function render(c) {
   meta('meta[property="og:description"]', c.meta_description);
   meta('meta[property="og:title"]', c.page_title);
 
-  document.getElementById('portrait').src = c.portrait || '';
+  const portrait = document.getElementById('portrait');
+  portrait.src = c.portrait || '';
+  portrait.classList.toggle('bw', !!c.portrait_grayscale);
   document.getElementById('resume-top').href = c.resume_file || '#';
 
   (c.about || []).forEach(p => document.getElementById('about-copy').append(el('p', null, p.text)));

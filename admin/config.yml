@@ -31,6 +31,7 @@ collections:
           - { name: resume_file, label: Resume PDF, widget: file, required: false }
           - { name: portrait, label: Portrait photo, widget: image, required: false }
           - { name: portrait_caption, label: Caption under the photo, widget: string, required: false }
+          - { name: portrait_grayscale, label: Black and white photo, widget: boolean, required: false, default: false, hint: "Off shows your photo in full colour" }
 
           - { name: about_heading, label: "Section heading: about", widget: string }
           - name: about
