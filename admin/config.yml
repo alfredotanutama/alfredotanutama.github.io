@@ -16,6 +16,11 @@ collections:
         label: Page content
         file: content.json
         fields:
+          - { name: page_title, label: Browser tab title, widget: string }
+          - { name: meta_description, label: Search and link preview description, widget: text }
+          - { name: host_label, label: "Header bar: left text", widget: string }
+          - { name: status_code, label: "Header bar: status badge", widget: string }
+
           - { name: headline, label: Headline, widget: string, hint: "The angle brackets are added automatically" }
           - { name: boot_line, label: Small line above the headline, widget: string }
           - { name: lede, label: "Intro: first half", widget: string }
@@ -25,13 +30,16 @@ collections:
           - { name: resume_cta, label: Resume button text, widget: string }
           - { name: resume_file, label: Resume PDF, widget: file, required: false }
           - { name: portrait, label: Portrait photo, widget: image, required: false }
+          - { name: portrait_caption, label: Caption under the photo, widget: string, required: false }
 
+          - { name: about_heading, label: "Section heading: about", widget: string }
           - name: about
             label: About paragraphs
             widget: list
             fields:
               - { name: text, label: Paragraph, widget: text }
 
+          - { name: credentials_heading, label: "Section heading: credentials", widget: string }
           - { name: stack_title, label: Stack heading, widget: string }
           - { name: stack_note, label: Stack note, widget: string }
           - name: stack
@@ -60,6 +68,7 @@ collections:
               - { name: issuer, label: Issuer or school, widget: string, required: false }
               - { name: url, label: Verification link, widget: string, required: false }
 
+          - { name: contact_heading, label: "Section heading: contact", widget: string }
           - { name: contact_intro, label: Contact intro line, widget: string }
           - name: links
             label: Contact links

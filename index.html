@@ -136,10 +136,10 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
 
 <header class="term">
   <div class="wrap bar">
-    <span class="host">alfredotanutama.github.io</span>
+    <span class="host" data-f="host_label"></span>
     <span class="tags">
       <a class="code code-link" id="archive" hidden></a>
-      <span class="code">303</span>
+      <span class="code" data-f="status_code"></span>
     </span>
   </div>
   <div class="wrap hero">
@@ -156,19 +156,19 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
 <main class="wrap">
 
   <section id="about" class="rv">
-    <h2>[ ABOUT ]</h2>
+    <h2 data-f="about_heading"></h2>
     <div class="about">
       <div id="about-copy"></div>
       <figure class="portrait">
         <img id="portrait" alt="Portrait of Alfredo Tanutama"
              onerror="this.closest('figure').hidden = true">
-        <figcaption>PORTRAIT.JPG</figcaption>
+        <figcaption data-f="portrait_caption"></figcaption>
       </figure>
     </div>
   </section>
 
   <section class="rv">
-    <h2>[ CREDENTIALS &amp; WORKLOAD LOGS ]</h2>
+    <h2 data-f="credentials_heading"></h2>
     <div class="logs">
       <div class="log">
         <h3 data-f="stack_title"></h3>
@@ -189,7 +189,7 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
   </section>
 
   <section class="rv">
-    <h2>[ CONTACT ]</h2>
+    <h2 data-f="contact_heading"></h2>
     <p data-f="contact_intro"></p>
     <nav class="links" id="links"></nav>
   </section>
@@ -220,6 +220,12 @@ fetch('content.json', { cache: 'no-cache' })
 
 function render(c) {
   document.querySelectorAll('[data-f]').forEach(n => { n.textContent = c[n.dataset.f] ?? ''; });
+
+  if (c.page_title) document.title = c.page_title;
+  const meta = (sel, v) => { const m = document.querySelector(sel); if (m && v) m.content = v; };
+  meta('meta[name="description"]', c.meta_description);
+  meta('meta[property="og:description"]', c.meta_description);
+  meta('meta[property="og:title"]', c.page_title);
 
   document.getElementById('portrait').src = c.portrait || '';
   document.getElementById('resume-top').href = c.resume_file || '#';
