@@ -8,6 +8,10 @@
 <meta property="og:title" content="Alfredo Tanutama // 303">
 <meta property="og:description" content="You asked for a page. You are being redirected to a person.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://alfredotanutama.github.io/">
+<meta property="og:image" content="https://alfredotanutama.github.io/assets/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111312'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='bold' fill='%23e0a44b' text-anchor='middle'%3E303%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#111312">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,7 +252,9 @@ function render(c) {
   const portrait = document.getElementById('portrait');
   portrait.src = c.portrait || '';
   portrait.classList.toggle('bw', !!c.portrait_grayscale);
-  document.getElementById('resume-top').href = c.resume_file || '#';
+  const resumeBtn = document.getElementById('resume-top');
+  resumeBtn.href = c.resume_file || '#';
+  resumeBtn.hidden = !c.resume_file;
 
   (c.about || []).forEach(p => document.getElementById('about-copy').append(el('p', null, p.text)));
 
@@ -281,8 +287,11 @@ function render(c) {
     document.getElementById('experience').append(row);
   });
 
+  // Only advertise a download when the target actually is one. The field can also
+  // hold a plain URL (a LinkedIn profile, say), and "download pdf" would be a lie.
+  const isFile = /\.(pdf|docx?)($|\?)/i.test(c.resume_file || '');
   const links = (c.links || []).concat(
-    c.resume_file ? [{ label: 'RESUME.LOG', value: 'download pdf', url: c.resume_file }] : []
+    isFile ? [{ label: 'RESUME.LOG', value: 'download pdf', url: c.resume_file }] : []
   );
   links.forEach(l => {
     const a = el('a');
