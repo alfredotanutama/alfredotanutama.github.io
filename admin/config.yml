@@ -2,11 +2,12 @@
 
 backend:
   name: github
-  repo: alfredotanutama/alfredotanutama.github.io
+  repo: alfredotanutama/PersonalWeb
   branch: main
 
 media_folder: /assets
-public_folder: /assets
+# The site is served from a subpath, so public URLs need the repo name.
+public_folder: /PersonalWeb/assets
 
 collections:
   - name: site

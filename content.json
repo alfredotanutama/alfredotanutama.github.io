@@ -6,44 +6,92 @@
   "lede_tail": "No services, no products, just the person.",
   "primary_cta": "READ THE RECORD",
   "resume_cta": "GET RESUME.LOG",
-  "resume_file": "/assets/resume.pdf",
-  "portrait": "/assets/portrait.jpg",
+  "resume_file": "/PersonalWeb/assets/resume.pdf",
+  "portrait": "/PersonalWeb/assets/portrait.jpg",
   "about": [
-    { "text": "Mainframe COBOL developer by trade, industrial engineer by training. I spend my days inside enterprise banking systems where a batch job that fails at 2am costs real money, and the fix has to be right the first time." },
-    { "text": "The industrial engineering degree is the part people underestimate. Four years of it taught me to look at a process before I look at the code: where the queue forms, which step is actually the constraint, what the system is optimizing for whether anyone intended it or not. COBOL taught me the other half, that reliability is a discipline, not a feature." },
-    { "text": "Currently exploring where those two halves point next: banking, business operations, and people development." }
+    {
+      "text": "Mainframe COBOL developer by trade, industrial engineer by training. I spend my days inside enterprise banking systems where a batch job that fails at 2am costs real money, and the fix has to be right the first time."
+    },
+    {
+      "text": "The industrial engineering degree is the part people underestimate. Four years of it taught me to look at a process before I look at the code: where the queue forms, which step is actually the constraint, what the system is optimizing for whether anyone intended it or not. COBOL taught me the other half, that reliability is a discipline, not a feature."
+    },
+    {
+      "text": "Currently exploring where those two halves point next: banking, business operations, and people development."
+    }
   ],
   "stack_title": "Enterprise stack",
   "stack_note": "What I ship against in production.",
   "stack": [
-    { "item": "COBOL" },
-    { "item": "JCL" },
-    { "item": "DB2" },
-    { "item": "CICS" },
-    { "item": "VSAM" },
-    { "item": "z/OS" },
-    { "item": "SQL" },
-    { "item": "Git" }
+    {
+      "item": "COBOL"
+    },
+    {
+      "item": "JCL"
+    },
+    {
+      "item": "DB2"
+    },
+    {
+      "item": "CICS"
+    },
+    {
+      "item": "VSAM"
+    },
+    {
+      "item": "z/OS"
+    },
+    {
+      "item": "SQL"
+    },
+    {
+      "item": "Git"
+    }
   ],
   "methods_title": "Industrial engineering",
   "methods_note": "The methods I bring to the process side.",
   "methods": [
-    { "item": "Process mapping" },
-    { "item": "Time study" },
-    { "item": "Lean" },
-    { "item": "Statistics" },
-    { "item": "Optimization" }
+    {
+      "item": "Process mapping"
+    },
+    {
+      "item": "Time study"
+    },
+    {
+      "item": "Lean"
+    },
+    {
+      "item": "Statistics"
+    },
+    {
+      "item": "Optimization"
+    }
   ],
   "record_title": "Record",
   "record_note": "Education and certifications.",
   "record": [
-    { "year": "", "title": "Add your degree and certificates in /admin", "issuer": "" }
+    {
+      "year": "",
+      "title": "Add your degree and certificates in /admin",
+      "issuer": ""
+    }
   ],
   "contact_intro": "Open to conversations about mainframe work, process engineering, and anything at the seam between them.",
   "links": [
-    { "label": "EMAIL", "value": "alfredotanutama@gmail.com", "url": "mailto:alfredotanutama@gmail.com" },
-    { "label": "LINKEDIN", "value": "/in/alfredotanutama", "url": "https://www.linkedin.com/in/alfredotanutama" },
-    { "label": "GITHUB", "value": "@alfredotanutama", "url": "https://github.com/alfredotanutama" }
+    {
+      "label": "EMAIL",
+      "value": "alfredotanutama@gmail.com",
+      "url": "mailto:alfredotanutama@gmail.com"
+    },
+    {
+      "label": "LINKEDIN",
+      "value": "/in/alfredotanutama",
+      "url": "https://www.linkedin.com/in/alfredotanutama"
+    },
+    {
+      "label": "GITHUB",
+      "value": "@alfredotanutama",
+      "url": "https://github.com/alfredotanutama"
+    }
   ],
   "footer": "Alfredo Tanutama"
 }
