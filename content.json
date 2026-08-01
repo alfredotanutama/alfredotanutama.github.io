@@ -1,6 +1,6 @@
 {
   "boot_line": "resolving requested resource",
-  "headline": "ERROR 404 // RESOURCE NOT FOUND",
+  "headline": "ERROR 303 // RESOURCE NOT FOUND",
   "lede": "The page you are looking for cannot be found, because",
   "lede_emphasis": "technically you are already looking at it.",
   "lede_tail": "No services, no products, just the person.",
