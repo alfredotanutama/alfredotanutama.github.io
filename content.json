@@ -25,6 +25,33 @@
       "text": "Currently exploring where those halves point next: banking, business operations, and people development."
     }
   ],
+  "experience_heading": "[ EXPERIENCE LOG ]",
+  "experience": [
+    {
+      "period": "2025 - now",
+      "role": "Back End Application Engineer",
+      "org": "PT Bank Central Asia",
+      "note": "Support, maintaiain, and develop application for Core deposit systems: BI-FAST, SKN-RTGS, and cash solution services."
+    },
+    {
+      "period": "2022 - 2024",
+      "role": "System Quality Improvement and Automation Testing",
+      "org": "PT Bank Central Asia",
+      "note": "Test scenarios in the mirror environment, job scheduling logic in Control-M, and test scripts that verified code before production release."
+    },
+    {
+      "period": "2021 - 2022",
+      "role": "Mainframe Core Banking Developer",
+      "org": "PT Bank Central Asia",
+      "note": "One of four people who built the mirror environment from scratch, to catch bugs before production."
+    },
+    {
+      "period": "2017 - 2020",
+      "role": "Computation Lab Assistant, then Head of Assistants",
+      "org": "Universitas Sumatera Utara",
+      "note": "Taught simulation, algorithms, and programming to industrial engineering students."
+    }
+  ],
   "credentials_heading": "[ CREDENTIALS & WORKLOAD LOGS ]",
   "stack_title": "Enterprise stack",
   "stack_note": "What I work in day to day.",
@@ -48,10 +75,10 @@
       "item": "Java"
     },
     {
-      "item": "SQL"
+      "item": "SQL DB2"
     },
     {
-      "item": "Git"
+      "item": "LCM"
     }
   ],
   "methods_title": "Industrial engineering",
@@ -61,16 +88,29 @@
       "item": "Process optimization"
     },
     {
-      "item": "Discrete event simulation"
+      "item": "Computer Simulation"
     },
     {
       "item": "Statistics"
     },
     {
-      "item": "Test automation"
+      "item": "Automation"
     },
     {
       "item": "Ergonomics"
+    }
+  ],
+  "languages_title": "Languages",
+  "languages_note": "Spoken and written.",
+  "languages": [
+    {
+      "item": "Bahasa Indonesia (C2)"
+    },
+    {
+      "item": "English (C1)"
+    },
+    {
+      "item": "Mandarin (B1)"
     }
   ],
   "record_title": "Record",
@@ -121,45 +161,5 @@
   ],
   "archive_label": "CS50",
   "archive_url": "/v1/",
-  "footer": "Alfredo Tanutama - 2026",
-  "experience_heading": "[ EXPERIENCE LOG ]",
-  "experience": [
-    {
-      "period": "2025 - now",
-      "role": "Clearing and Recon, Domestic Transactions Specialist",
-      "org": "PT Bank Central Asia",
-      "note": "Core deposit systems: BI-FAST, SKN-RTGS, and cash solution services."
-    },
-    {
-      "period": "2022 - 2024",
-      "role": "System Quality Improvement and Automation Testing",
-      "org": "PT Bank Central Asia",
-      "note": "Test scenarios in the mirror environment, job scheduling logic in Control-M, and test scripts that verified code before production release."
-    },
-    {
-      "period": "2021 - 2022",
-      "role": "Mainframe Core Banking Developer",
-      "org": "PT Bank Central Asia",
-      "note": "One of four people who built the mirror environment from scratch, to catch bugs before production. Target was zero batch issues."
-    },
-    {
-      "period": "2017 - 2020",
-      "role": "Computation Lab Assistant, then Head of Assistants",
-      "org": "Universitas Sumatera Utara",
-      "note": "Taught simulation, algorithms, and programming to industrial engineering students."
-    }
-  ],
-  "languages_title": "Languages",
-  "languages_note": "Spoken and written.",
-  "languages": [
-    {
-      "item": "Bahasa Indonesia (full professional)"
-    },
-    {
-      "item": "English (professional working)"
-    },
-    {
-      "item": "Mandarin (elementary)"
-    }
-  ]
+  "footer": "Alfredo Tanutama - 2026"
 }
