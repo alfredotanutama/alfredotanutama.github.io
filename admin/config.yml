@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: alfredotanutama/alfredotanutama.github.io
+  branch: main
+
+media_folder: /assets
+public_folder: /assets
+
+collections:
+  - name: site
+    label: Site
+    files:
+      - name: content
+        label: Page content
+        file: /content.json
+        fields:
+          - { name: headline, label: Headline, widget: string, hint: "The angle brackets are added automatically" }
+          - { name: boot_line, label: Small line above the headline, widget: string }
+          - { name: lede, label: "Intro: first half", widget: string }
+          - { name: lede_emphasis, label: "Intro: highlighted part", widget: string }
+          - { name: lede_tail, label: "Intro: last half", widget: string }
+          - { name: primary_cta, label: Main button text, widget: string }
+          - { name: resume_cta, label: Resume button text, widget: string }
+          - { name: resume_file, label: Resume PDF, widget: file, required: false }
+          - { name: portrait, label: Portrait photo, widget: image, required: false }
+
+          - name: about
+            label: About paragraphs
+            widget: list
+            fields:
+              - { name: text, label: Paragraph, widget: text }
+
+          - { name: stack_title, label: Stack heading, widget: string }
+          - { name: stack_note, label: Stack note, widget: string }
+          - name: stack
+            label: Stack items
+            widget: list
+            fields:
+              - { name: item, label: Item, widget: string }
+
+          - { name: methods_title, label: Methods heading, widget: string }
+          - { name: methods_note, label: Methods note, widget: string }
+          - name: methods
+            label: Method items
+            widget: list
+            fields:
+              - { name: item, label: Item, widget: string }
+
+          - { name: record_title, label: Record heading, widget: string }
+          - { name: record_note, label: Record note, widget: string }
+          - name: record
+            label: Certificates and education
+            widget: list
+            summary: "{{fields.year}} {{fields.title}}"
+            fields:
+              - { name: year, label: Year or range, widget: string }
+              - { name: title, label: Name, widget: string }
+              - { name: issuer, label: Issuer or school, widget: string, required: false }
+
+          - { name: contact_intro, label: Contact intro line, widget: string }
+          - name: links
+            label: Contact links
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Shown value, widget: string }
+              - { name: url, label: URL, widget: string }
+
+          - { name: footer, label: Footer text, widget: string }

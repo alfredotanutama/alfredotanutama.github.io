@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alfredo Tanutama // 404</title>
+<meta name="description" content="Mainframe COBOL developer, industrial engineer by training. Personal hub of Alfredo Tanutama.">
+<meta property="og:title" content="Alfredo Tanutama // 404">
+<meta property="og:description" content="The page you are looking for cannot be found, because technically you are already looking at it.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#111312">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14120f;
+  --paper:#faf9f7;
+  --paper-2:#f1efe9;
+  --rule:#d8d4cb;
+  --muted:#6b6558;
+  --term-bg:#111312;
+  --term-fg:#e6e4de;
+  --term-muted:#8d8f89;
+  --term-rule:#2a2d2b;
+  --accent-dark:#e0a44b;   /* amber on the terminal block */
+  --accent-light:#8a4f11;  /* same hue, AA contrast on paper */
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--mono);font-size:15px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+@media(min-width:700px){.wrap{width:min(1120px,100% - 4rem)}}
+a{color:inherit}
+
+/* ---------- terminal block (hero) ---------- */
+.term{background:var(--term-bg);color:var(--term-fg);border-bottom:1px solid var(--term-rule)}
+.bar{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  min-height:60px;padding:.9rem 0;border-bottom:1px solid var(--term-rule);
+  font-size:11.5px;color:var(--term-muted)
+}
+.bar .code{border:1px solid var(--term-rule);padding:.15rem .55rem;color:var(--accent-dark);flex:none}
+.hero{padding:clamp(2.75rem,7vw,5.5rem) 0 clamp(3rem,8vw,6rem)}
+.boot{font-size:11.5px;color:var(--term-muted);letter-spacing:.04em;margin:0 0 1.4rem}
+.boot .caret{
+  display:inline-block;width:.55em;height:1em;background:var(--accent-dark);
+  vertical-align:-.15em;margin-left:.2em;animation:blink 1.05s steps(1) infinite
+}
+@keyframes blink{50%{opacity:0}}
+h1{
+  margin:0;font-size:clamp(1.35rem,4.9vw,3.9rem);font-weight:700;
+  line-height:1.12;letter-spacing:-.02em;text-wrap:balance
+}
+h1 .brk{color:var(--accent-dark);font-weight:400}
+.lede{
+  margin:1.5rem 0 0;max-width:58ch;font-size:clamp(.95rem,1.4vw,1.1rem);
+  color:var(--term-fg);line-height:1.7
+}
+.lede em{color:var(--accent-dark);font-style:normal}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.2rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:.65rem 1.15rem;font-size:13px;letter-spacing:.06em;
+  text-decoration:none;border:1px solid currentColor;
+  transition:transform .15s,background .15s,color .15s
+}
+@media(max-width:479px){.cta{display:grid;grid-template-columns:1fr}}
+.btn:active{transform:translateY(1px)}
+.btn-solid{background:var(--accent-dark);border-color:var(--accent-dark);color:#1a1408;font-weight:700}
+.btn-solid:hover{background:#efb968;border-color:#efb968}
+.btn-ghost{color:var(--term-fg);border-color:#4a4d4a}
+.btn-ghost:hover{background:#1c1f1d;border-color:var(--term-fg)}
+
+/* ---------- paper body ---------- */
+section{padding:clamp(3rem,7vw,6rem) 0;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0}
+h2{margin:0 0 1.8rem;font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--accent-light)}
+h3{margin:0 0 .5rem;font-size:14px;font-weight:700;letter-spacing:.02em}
+p{margin:0 0 1.1rem;max-width:65ch;color:#2c2822}
+.dim{color:var(--muted)}
+
+.about{display:grid;grid-template-columns:1fr;gap:2.25rem;align-items:start}
+@media(min-width:860px){.about{grid-template-columns:1.35fr .9fr;gap:4rem}}
+.portrait{position:relative;border:1px solid var(--ink);padding:.5rem;background:var(--paper-2);margin:0;max-width:420px}
+.portrait img{display:block;width:100%;height:auto;filter:grayscale(1) contrast(1.05)}
+.portrait figcaption{margin-top:.5rem;font-size:11px;letter-spacing:.08em;color:var(--muted)}
+
+.logs{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+@media(min-width:860px){.logs{grid-template-columns:7fr 5fr}.logs>*:last-child{grid-column:1/-1}}
+.log{background:var(--paper);padding:1.4rem}
+@media(min-width:700px){.log{padding:1.75rem}}
+.log:nth-child(2){background:var(--paper-2)}
+.log ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
+.log li{border:1px solid var(--rule);padding:.3rem .6rem;font-size:12.5px;background:var(--paper)}
+.rec{margin:0 0 .9rem;max-width:65ch}
+.rec .yr{display:block;color:var(--accent-light);font-size:12px;letter-spacing:.06em}
+.rec .iss{color:var(--muted);font-size:13px}
+
+.links{display:grid;grid-template-columns:1fr;border-top:1px solid var(--rule);max-width:760px}
+.links a{
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem 1rem;
+  min-height:56px;padding:1rem .2rem;border-bottom:1px solid var(--rule);
+  text-decoration:none;transition:padding-left .18s,color .18s
+}
+.links a:hover{padding-left:.7rem;color:var(--accent-light)}
+.links .val{font-size:12.5px;color:var(--muted)}
+.links a:hover .val{color:var(--accent-light)}
+footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;color:var(--muted)}
+
+/* ---------- scroll reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .boot .caret{animation:none}
+}
+:focus-visible{outline:2px solid var(--accent-light);outline-offset:3px}
+.term :focus-visible{outline-color:var(--accent-dark)}
+.err{padding:3rem 0;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="term">
+  <div class="wrap bar">
+    <span>alfredotanutama.github.io</span>
+    <span class="code">404</span>
+  </div>
+  <div class="wrap hero">
+    <p class="boot"><span data-f="boot_line"></span><span class="caret"></span></p>
+    <h1><span class="brk">&lt;</span> <span data-f="headline"></span> <span class="brk">&gt;</span></h1>
+    <p class="lede"><span data-f="lede"></span> <em data-f="lede_emphasis"></em> <span data-f="lede_tail"></span></p>
+    <div class="cta">
+      <a class="btn btn-solid" href="#about" data-f="primary_cta"></a>
+      <a class="btn btn-ghost" id="resume-top" data-f="resume_cta"></a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about" class="rv">
+    <h2>[ ABOUT ]</h2>
+    <div class="about">
+      <div id="about-copy"></div>
+      <figure class="portrait">
+        <img id="portrait" alt="Portrait of Alfredo Tanutama"
+             onerror="this.closest('figure').hidden = true">
+        <figcaption>PORTRAIT.JPG</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>[ CREDENTIALS &amp; WORKLOAD LOGS ]</h2>
+    <div class="logs">
+      <div class="log">
+        <h3 data-f="stack_title"></h3>
+        <p class="dim" data-f="stack_note"></p>
+        <ul id="stack"></ul>
+      </div>
+      <div class="log">
+        <h3 data-f="methods_title"></h3>
+        <p class="dim" data-f="methods_note"></p>
+        <ul id="methods"></ul>
+      </div>
+      <div class="log">
+        <h3 data-f="record_title"></h3>
+        <p class="dim" data-f="record_note"></p>
+        <div id="record"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>[ CONTACT ]</h2>
+    <p data-f="contact_intro"></p>
+    <nav class="links" id="links"></nav>
+  </section>
+
+</main>
+
+<footer class="wrap"><span data-f="footer"></span></footer>
+
+<script>
+// Content lives in content.json so the CMS at /admin can edit it without touching markup.
+// ponytail: client-side render, so text is not in the initial HTML. Fine at this size.
+// If search ranking ever matters more than the zero-build setup, move to a static generator.
+const el = (tag, cls, text) => {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+};
+
+fetch('content.json', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(render)
+  .catch(() => {
+    document.querySelector('main').prepend(
+      el('p', 'err', 'Could not load content.json. Open this page over http, not as a file: run  python3 -m http.server  in this folder.')
+    );
+  });
+
+function render(c) {
+  document.querySelectorAll('[data-f]').forEach(n => { n.textContent = c[n.dataset.f] ?? ''; });
+
+  document.getElementById('portrait').src = c.portrait || '';
+  document.getElementById('resume-top').href = c.resume_file || '#';
+
+  (c.about || []).forEach(p => document.getElementById('about-copy').append(el('p', null, p.text)));
+
+  const chips = (id, list) =>
+    (list || []).forEach(x => document.getElementById(id).append(el('li', null, x.item)));
+  chips('stack', c.stack);
+  chips('methods', c.methods);
+
+  (c.record || []).forEach(r => {
+    const p = el('p', 'rec');
+    p.append(el('span', 'yr', r.year), document.createTextNode(r.title || ''));
+    if (r.issuer) p.append(el('br'), el('span', 'iss', r.issuer));
+    document.getElementById('record').append(p);
+  });
+
+  const links = (c.links || []).concat(
+    c.resume_file ? [{ label: 'RESUME.LOG', value: 'download pdf', url: c.resume_file }] : []
+  );
+  links.forEach(l => {
+    const a = el('a');
+    a.href = l.url;
+    if (/^https?:/.test(l.url)) { a.target = '_blank'; a.rel = 'noopener'; }
+    a.append(el('span', null, l.label), el('span', 'val', l.value));
+    document.getElementById('links').append(a);
+  });
+}
+
+// Scroll reveal: sequences the sections so the record reads as it is uncovered.
+const rv = document.querySelectorAll('.rv');
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  rv.forEach(n => n.classList.add('in'));
+} else {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  rv.forEach(n => io.observe(n));
+}
+</script>
+</body>
+</html>
