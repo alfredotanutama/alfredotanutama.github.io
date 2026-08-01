@@ -1,0 +1,54 @@
+
+html,body {
+    background: #1F1B24;
+}
+h1,p {
+    color: #ffde21;
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.content {
+    background: #1F1B24;
+    margin: 0;
+    padding: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.small-image {
+    display: block;
+    max-width: 150px;
+    height: auto;
+}
+
+.cropped-circle {
+    border-radius: 50%;
+    border: 2px solid #ffde21;
+}
+
+.content {
+    color: #ffde21;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.font-white{
+    color: white !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

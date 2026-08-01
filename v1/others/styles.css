@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+}
+
+h1 {
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+  color: black;
+  background-color: #2f2f2f;
+  display: flex;
+  justify-content: center;
+
+}
+
+.home_header {
+  background-color: #2f2f2f; /* Dark background */
+  color: #ffde21;
+  text-align: center;
+  padding: 0px 0px; /* Optional: add padding for spacing */
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  /* Remove padding & margin */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+  color: #ffde21;
+}
+
+a {
+  color: #4a4a4a; /* Default link color (dark gray) */
+  transition: color 0.5s; /* Smooth transition for color change */
+  text-decoration: none !important;
+}
+
+a.active{
+  color: #ffde21; /* Change color on hover or when active */
+}
+
+a:hover {
+  color: white !important; /* Change color on hover to white */
+}
+
+.home_header hr {
+  margin: 4px; /* Margin for <hr> */
+  border: 1px solid #ccc; /* Optional: set border color and style */
+}
