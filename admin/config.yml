@@ -14,7 +14,7 @@ collections:
     files:
       - name: content
         label: Page content
-        file: /content.json
+        file: content.json
         fields:
           - { name: headline, label: Headline, widget: string, hint: "The angle brackets are added automatically" }
           - { name: boot_line, label: Small line above the headline, widget: string }
