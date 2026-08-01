@@ -76,6 +76,8 @@ h1 .brk{color:var(--accent-dark);font-weight:400}
 .btn-solid:hover{background:#efb968;border-color:#efb968}
 .btn-ghost{color:var(--term-fg);border-color:#4a4d4a}
 .btn-ghost:hover{background:#1c1f1d;border-color:var(--term-fg)}
+.btn-paper{color:var(--ink);border-color:var(--ink);margin-top:1.75rem}
+.btn-paper:hover{background:var(--ink);color:var(--paper)}
 
 /* ---------- paper body ---------- */
 section{padding:clamp(3rem,7vw,6rem) 0;border-top:1px solid var(--rule)}
@@ -130,7 +132,7 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
 
 <header class="term">
   <div class="wrap bar">
-    <span>alfredotanutama.github.io/PersonalWeb</span>
+    <span>alfredotanutama.github.io</span>
     <span class="code">404</span>
   </div>
   <div class="wrap hero">
@@ -183,6 +185,7 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
     <h2>[ CONTACT ]</h2>
     <p data-f="contact_intro"></p>
     <nav class="links" id="links"></nav>
+    <a class="btn btn-paper" id="archive" hidden></a>
   </section>
 
 </main>
@@ -239,6 +242,13 @@ function render(c) {
     a.append(el('span', null, l.label), el('span', 'val', l.value));
     document.getElementById('links').append(a);
   });
+
+  if (c.archive_url) {
+    const b = document.getElementById('archive');
+    b.href = c.archive_url;
+    b.textContent = c.archive_label || 'OLDER SITE';
+    b.hidden = false;
+  }
 }
 
 // Scroll reveal: sequences the sections so the record reads as it is uncovered.

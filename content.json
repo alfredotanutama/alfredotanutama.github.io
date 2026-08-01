@@ -6,8 +6,8 @@
   "lede_tail": "No services, no products, just the person.",
   "primary_cta": "READ THE RECORD",
   "resume_cta": "GET RESUME.LOG",
-  "resume_file": "/PersonalWeb/assets/resume.pdf",
-  "portrait": "/PersonalWeb/assets/portrait.jpg",
+  "resume_file": "/assets/resume.pdf",
+  "portrait": "/assets/portrait.jpg",
   "about": [
     {
       "text": "Mainframe COBOL developer by trade, industrial engineer by training. I spend my days inside enterprise banking systems where a batch job that fails at 2am costs real money, and the fix has to be right the first time."
@@ -93,5 +93,7 @@
       "url": "https://github.com/alfredotanutama"
     }
   ],
-  "footer": "Alfredo Tanutama"
+  "footer": "Alfredo Tanutama",
+  "archive_label": "CS50 PROJECT (PERSONAL WEB)",
+  "archive_url": "/v1/"
 }
