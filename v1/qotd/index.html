@@ -82,14 +82,15 @@
 
     </body>
     <script>
-      const category = 'happiness'; // Set the category for the quote
-      const apiKey = 'k7Lb7FDMRIloJ8mTka9c0A==DZgQIYpFFXBtM2Q6'; // Replace with your actual API key
+      // api-ninjas made the category filter premium-only, so requesting one now
+      // returns a 400 and the button just prints an error. Fetch any quote instead.
+      const apiKey = 'k7Lb7FDMRIloJ8mTka9c0A==DZgQIYpFFXBtM2Q6'; // public by necessity, see README
 
       function fetchQuoteFromNinja() {
           return new Promise((resolve, reject) => {
               $.ajax({
                   method: 'GET',
-                  url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+                  url: 'https://api.api-ninjas.com/v1/quotes',
                   headers: { 'X-Api-Key': apiKey }, // Use the apiKey variable
                   contentType: 'application/json',
                   success: function(result) {
