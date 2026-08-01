@@ -103,6 +103,8 @@ p{margin:0 0 1.1rem;max-width:65ch;color:#2c2822}
 .rec{margin:0 0 .9rem;max-width:65ch}
 .rec .yr{display:block;color:var(--accent-light);font-size:12px;letter-spacing:.06em}
 .rec .iss{color:var(--muted);font-size:13px}
+.rec .verify{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.rec .verify:hover{text-decoration-color:var(--accent-light);color:var(--accent-light)}
 
 .links{display:grid;grid-template-columns:1fr;border-top:1px solid var(--rule);max-width:760px}
 .links a{
@@ -227,7 +229,14 @@ function render(c) {
 
   (c.record || []).forEach(r => {
     const p = el('p', 'rec');
-    p.append(el('span', 'yr', r.year), document.createTextNode(r.title || ''));
+    let name = document.createTextNode(r.title || '');
+    if (r.url) {
+      const a = el('a', 'verify', r.title || '');
+      a.href = r.url; a.target = '_blank'; a.rel = 'noopener';
+      a.title = 'Verify this certificate';
+      name = a;
+    }
+    p.append(el('span', 'yr', r.year), name);
     if (r.issuer) p.append(el('br'), el('span', 'iss', r.issuer));
     document.getElementById('record').append(p);
   });

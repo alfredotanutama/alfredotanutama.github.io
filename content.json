@@ -70,9 +70,10 @@
   "record_note": "Education and certifications.",
   "record": [
     {
-      "year": "",
-      "title": "Add your degree and certificates in /admin",
-      "issuer": ""
+      "year": "2025",
+      "title": "CS50x: Introduction to Computer Science",
+      "issuer": "HarvardX",
+      "url": "https://cs50.harvard.edu/certificates/bca0a1e6-9d51-450e-9e32-080956e34b17"
     }
   ],
   "contact_intro": "Open to conversations about mainframe work, process engineering, and anything at the seam between them.",

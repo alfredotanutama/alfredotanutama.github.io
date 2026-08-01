@@ -58,6 +58,7 @@ collections:
               - { name: year, label: Year or range, widget: string }
               - { name: title, label: Name, widget: string }
               - { name: issuer, label: Issuer or school, widget: string, required: false }
+              - { name: url, label: Verification link, widget: string, required: false }
 
           - { name: contact_intro, label: Contact intro line, widget: string }
           - name: links
