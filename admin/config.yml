@@ -39,6 +39,17 @@ collections:
             fields:
               - { name: text, label: Paragraph, widget: text }
 
+          - { name: experience_heading, label: "Section heading: experience", widget: string }
+          - name: experience
+            label: Experience
+            widget: list
+            summary: "{{fields.period}}  {{fields.role}}"
+            fields:
+              - { name: period, label: Period, widget: string }
+              - { name: role, label: Role, widget: string }
+              - { name: org, label: Organisation, widget: string }
+              - { name: note, label: What you did, widget: text, required: false }
+
           - { name: credentials_heading, label: "Section heading: credentials", widget: string }
           - { name: stack_title, label: Stack heading, widget: string }
           - { name: stack_note, label: Stack note, widget: string }
@@ -52,6 +63,14 @@ collections:
           - { name: methods_note, label: Methods note, widget: string }
           - name: methods
             label: Method items
+            widget: list
+            fields:
+              - { name: item, label: Item, widget: string }
+
+          - { name: languages_title, label: Languages heading, widget: string }
+          - { name: languages_note, label: Languages note, widget: string }
+          - name: languages
+            label: Language items
             widget: list
             fields:
               - { name: item, label: Item, widget: string }

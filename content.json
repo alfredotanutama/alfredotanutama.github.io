@@ -1,6 +1,6 @@
 {
   "page_title": "Alfredo Tanutama // 303",
-  "meta_description": "Mainframe COBOL developer, Industrial Engineer by degree. Personal hub of Alfredo Tanutama.",
+  "meta_description": "Alfredo Tanutama, core banking developer at PT Bank Central Asia and industrial engineer. Mainframe systems, process optimization, people development.",
   "host_label": "alfredotanutama.github.io",
   "status_code": "303",
   "headline": "ERROR 303 // You have landed on my Page ^^d",
@@ -16,18 +16,18 @@
   "about_heading": "[ ABOUT ]",
   "about": [
     {
-      "text": "Mainframe COBOL developer by trade, industrial engineer by training. I spend my days inside enterprise banking systems where a batch job that fails at 2am costs real money, and the fix has to be right the first time."
+      "text": "Industrial engineer by training, core banking developer by trade. I work at PT Bank Central Asia on the systems that move money between banks: BI-FAST, SKN-RTGS, and the cash solution services behind them. When a nightly batch fails, millions of people find out in the morning."
     },
     {
-      "text": "The industrial engineering degree is the part people underestimate. Four years of it taught me to look at a process before I look at the code: where the queue forms, which step is actually the constraint, what the system is optimizing for whether anyone intended it or not. COBOL taught me the other half, that reliability is a discipline, not a feature."
+      "text": "I did not start in IT. I graduated in industrial engineering in 2020, joined BCA as an IT engineer, and taught myself Python and Java, then COBOL, JCL, and ISPF. The engineering degree is still the part people underestimate: it taught me to look at the process before the code, where the queue forms and which step is actually the constraint. The mainframe taught me the other half, that reliability is a discipline, not a feature."
     },
     {
-      "text": "Currently exploring where those two halves point next: banking, business operations, and people development."
+      "text": "Currently exploring where those halves point next: banking, business operations, and people development."
     }
   ],
   "credentials_heading": "[ CREDENTIALS & WORKLOAD LOGS ]",
   "stack_title": "Enterprise stack",
-  "stack_note": "What I ship against in production.",
+  "stack_note": "What I work in day to day.",
   "stack": [
     {
       "item": "COBOL"
@@ -36,16 +36,16 @@
       "item": "JCL"
     },
     {
-      "item": "DB2"
+      "item": "ISPF"
     },
     {
-      "item": "CICS"
+      "item": "Control-M"
     },
     {
-      "item": "VSAM"
+      "item": "Python"
     },
     {
-      "item": "z/OS"
+      "item": "Java"
     },
     {
       "item": "SQL"
@@ -58,19 +58,19 @@
   "methods_note": "The methods I bring to the process side.",
   "methods": [
     {
-      "item": "Process mapping"
+      "item": "Process optimization"
     },
     {
-      "item": "Time study"
-    },
-    {
-      "item": "Lean"
+      "item": "Discrete event simulation"
     },
     {
       "item": "Statistics"
     },
     {
-      "item": "Optimization"
+      "item": "Test automation"
+    },
+    {
+      "item": "Ergonomics"
     }
   ],
   "record_title": "Record",
@@ -81,6 +81,18 @@
       "title": "CS50x: Introduction to Computer Science",
       "issuer": "HarvardX",
       "url": "https://cs50.harvard.edu/certificates/bca0a1e6-9d51-450e-9e32-080956e34b17"
+    },
+    {
+      "year": "2016 - 2020",
+      "title": "Bachelor of Industrial Engineering",
+      "issuer": "Universitas Sumatera Utara, GPA 3.70 / 4.00",
+      "url": ""
+    },
+    {
+      "year": "2020",
+      "title": "Digitalent FGA Data Science Scholarship",
+      "issuer": "Ministry of Communication and Information Technology",
+      "url": ""
     }
   ],
   "contact_heading": "[ CONTACT ]",
@@ -100,9 +112,54 @@
       "label": "GITHUB",
       "value": "@alfredotanutama",
       "url": "https://github.com/alfredotanutama"
+    },
+    {
+      "label": "CREDLY",
+      "value": "verified badges",
+      "url": "https://www.credly.com/users/alfredo-tanutama"
     }
   ],
   "archive_label": "CS50",
   "archive_url": "/v1/",
-  "footer": "Alfredo Tanutama - 2026"
+  "footer": "Alfredo Tanutama - 2026",
+  "experience_heading": "[ EXPERIENCE LOG ]",
+  "experience": [
+    {
+      "period": "2025 - now",
+      "role": "Clearing and Recon, Domestic Transactions Specialist",
+      "org": "PT Bank Central Asia",
+      "note": "Core deposit systems: BI-FAST, SKN-RTGS, and cash solution services."
+    },
+    {
+      "period": "2022 - 2024",
+      "role": "System Quality Improvement and Automation Testing",
+      "org": "PT Bank Central Asia",
+      "note": "Test scenarios in the mirror environment, job scheduling logic in Control-M, and test scripts that verified code before production release."
+    },
+    {
+      "period": "2021 - 2022",
+      "role": "Mainframe Core Banking Developer",
+      "org": "PT Bank Central Asia",
+      "note": "One of four people who built the mirror environment from scratch, to catch bugs before production. Target was zero batch issues."
+    },
+    {
+      "period": "2017 - 2020",
+      "role": "Computation Lab Assistant, then Head of Assistants",
+      "org": "Universitas Sumatera Utara",
+      "note": "Taught simulation, algorithms, and programming to industrial engineering students."
+    }
+  ],
+  "languages_title": "Languages",
+  "languages_note": "Spoken and written.",
+  "languages": [
+    {
+      "item": "Bahasa Indonesia (full professional)"
+    },
+    {
+      "item": "English (professional working)"
+    },
+    {
+      "item": "Mandarin (elementary)"
+    }
+  ]
 }

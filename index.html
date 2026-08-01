@@ -96,7 +96,7 @@ p{margin:0 0 1.1rem;max-width:65ch;color:#2c2822}
 .portrait figcaption{margin-top:.5rem;font-size:11px;letter-spacing:.08em;color:var(--muted)}
 
 .logs{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
-@media(min-width:860px){.logs{grid-template-columns:7fr 5fr}.logs>*:last-child{grid-column:1/-1}}
+@media(min-width:860px){.logs{grid-template-columns:7fr 5fr}}
 .log{background:var(--paper);padding:1.4rem}
 @media(min-width:700px){.log{padding:1.75rem}}
 .log:nth-child(2){background:var(--paper-2)}
@@ -108,6 +108,13 @@ p{margin:0 0 1.1rem;max-width:65ch;color:#2c2822}
 .rec .verify{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
 .rec .verify:hover{text-decoration-color:var(--accent-light);color:var(--accent-light)}
 
+.xp{border-top:1px solid var(--rule)}
+.xp .row{display:grid;grid-template-columns:1fr;gap:.2rem;padding:1.5rem 0;border-bottom:1px solid var(--rule)}
+@media(min-width:760px){.xp .row{grid-template-columns:9rem 1fr;gap:0 2rem;align-items:baseline}}
+.xp .per{color:var(--accent-light);font-size:12px;letter-spacing:.06em}
+.xp .role{font-weight:700}
+.xp .org{color:var(--muted);font-size:13px}
+.xp .note{margin:.5rem 0 0;font-size:14px;color:#443f37;max-width:62ch}
 .links{display:grid;grid-template-columns:1fr;border-top:1px solid var(--rule);max-width:760px}
 .links a{
   display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem 1rem;
@@ -168,6 +175,11 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
   </section>
 
   <section class="rv">
+    <h2 data-f="experience_heading"></h2>
+    <div class="xp" id="experience"></div>
+  </section>
+
+  <section class="rv">
     <h2 data-f="credentials_heading"></h2>
     <div class="logs">
       <div class="log">
@@ -179,6 +191,11 @@ footer{padding:2.25rem 0 3rem;border-top:1px solid var(--rule);font-size:12px;co
         <h3 data-f="methods_title"></h3>
         <p class="dim" data-f="methods_note"></p>
         <ul id="methods"></ul>
+      </div>
+      <div class="log">
+        <h3 data-f="languages_title"></h3>
+        <p class="dim" data-f="languages_note"></p>
+        <ul id="languages"></ul>
       </div>
       <div class="log">
         <h3 data-f="record_title"></h3>
@@ -236,6 +253,7 @@ function render(c) {
     (list || []).forEach(x => document.getElementById(id).append(el('li', null, x.item)));
   chips('stack', c.stack);
   chips('methods', c.methods);
+  chips('languages', c.languages);
 
   (c.record || []).forEach(r => {
     const p = el('p', 'rec');
@@ -249,6 +267,15 @@ function render(c) {
     p.append(el('span', 'yr', r.year), name);
     if (r.issuer) p.append(el('br'), el('span', 'iss', r.issuer));
     document.getElementById('record').append(p);
+  });
+
+  (c.experience || []).forEach(x => {
+    const row = el('div', 'row');
+    const body = el('div');
+    body.append(el('div', 'role', x.role), el('div', 'org', x.org));
+    if (x.note) body.append(el('p', 'note', x.note));
+    row.append(el('div', 'per', x.period), body);
+    document.getElementById('experience').append(row);
   });
 
   const links = (c.links || []).concat(
