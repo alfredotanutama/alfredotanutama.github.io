@@ -13,7 +13,7 @@
   "resume_file": "https://id.linkedin.com/in/alfredotanutama",
   "portrait": "/assets/portrait.jpg",
   "portrait_caption": "PORTRAIT.JPG",
-  "portrait_grayscale": false,
+  "portrait_grayscale": true,
   "about_heading": "[ ABOUT ]",
   "about": [
     {
